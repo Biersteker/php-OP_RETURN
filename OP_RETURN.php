@@ -62,6 +62,10 @@
 		if (!$result['isvalid'])
 			return array('error' => 'Send address could not be validated: '.$send_address);
 			
+		if (preg_match('/^([0-9A-Fa-f]{2})*$/', $metadata))
+		$metadata=pack('H*', $metadata); // convert from hex if it looks like hex
+	
+		
 		$metadata_len=strlen($metadata);
 			
 		if ($metadata_len>65536)
