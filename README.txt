@@ -1,5 +1,14 @@
 php-OP_RETURN v2.0
 ==================
+//
+GielBier edit:
+- Moved $metadata=pack('H*', $metadata); // convert from hex if it looks like hex
+to proper place , making hexdetection usable as lib instead of cli.
+	
+
+
+
+//
 Simple PHP commands and libraries for using OP_RETURNs in bitcoin transactions.
 
 Copyright (c) Coin Sciences Ltd - http://coinsecrets.org/
