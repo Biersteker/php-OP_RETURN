@@ -45,9 +45,6 @@ HEREDOC;
 	
 	require 'OP_RETURN.php';
 
-	if (preg_match('/^([0-9A-Fa-f]{2})*$/', $metadata))
-		$metadata=pack('H*', $metadata); // convert from hex if it looks like hex
-	
 	$result=OP_RETURN_send($send_address, $send_amount, $metadata, $testnet);
 	
 	if (isset($result['error']))
